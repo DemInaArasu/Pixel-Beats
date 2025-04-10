@@ -1,6 +1,6 @@
 # PixelBeats: A Music-Driven Pixel Art Visualizer
 
-## https://github.com/your-username/pixelbeats-visualizer
+## https://github.com/DemInaArasu/Pixel-Beats
 
 ## PixelBeats is a real-time pixel art visualizer that reacts to music/audio input, creating procedurally generated visual patterns and animations. It blends generative art and music, perfect for visual performance artists, VJs, and digital art installations.
 
