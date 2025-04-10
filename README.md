@@ -1,1 +1,1 @@
-# Pixel-Beats
+# PixelBeats-Visualizer
