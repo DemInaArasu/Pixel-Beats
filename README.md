@@ -4,7 +4,7 @@
 Demo Video:
 
 ## Github Repository
-Github Repo:
+Github Repo: https://github.com/DemInaArasu/Pixel-Beats
 
 ## Description
 **PixelBeats** is a generative art project that creates visually dynamic, retro-style pixel art in real-time based on live audio input. It reacts to sound amplitude and frequency patterns to produce evolving pixel grid compositions using a vibrant, shifting color palette. The visuals are saved as a series of image frames that can be compiled into animations, used in VJ performances, or simply enjoyed as digital art.
