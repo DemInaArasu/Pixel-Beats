@@ -1,5 +1,6 @@
 import numpy as np
 import sounddevice as sd
+import pygame
 from PIL import Image, ImageDraw
 import time
 import os
@@ -29,21 +30,44 @@ def generate_pixel_art(amplitude):
 def save_image(image, frame):
     image.save(f"visuals/frame_{frame:04d}.png")
 
+def pil_to_surface(pil_image):
+    mode = pil_image.mode
+    size = pil_image.size
+    data = pil_image.tobytes()
+    return pygame.image.fromstring(data, size, mode)
+
 def main():
     print("Starting PixelBeats Visualizer... Press Ctrl+C to stop.")
     global amplitude
     amplitude = 0.0
     frame = 0
-    
+
+    pygame.init()
+    screen = pygame.display.set_mode((WIDTH, HEIGHT))
+    pygame.display.set_caption("PixelBeats Visualizer")
+    clock = pygame.time.Clock()
+
     with sd.InputStream(callback=audio_callback):
         try:
-            while True:
+            running = True
+            while running:
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        running = False
+
                 img = generate_pixel_art(amplitude)
                 save_image(img, frame)
                 frame += 1
-                time.sleep(1 / FPS)
+
+                surface = pil_to_surface(img)
+                screen.blit(surface, (0, 0))
+                pygame.display.flip()
+                clock.tick(FPS)
+
         except KeyboardInterrupt:
             print("\nVisualization stopped.")
+        finally:
+            pygame.quit()
 
 if __name__ == "__main__":
     main()
