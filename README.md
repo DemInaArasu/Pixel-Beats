@@ -18,3 +18,7 @@ pixelbeats-visualizer/ │ ├── visuals/ # Output image frames from the vis
 - **Audio-Reactive Visuals**: The visuals respond to real-time audio input using amplitude detection with `sounddevice`.
 - **Modular Structure**: The program is organized around a main function and supporting functions for visualization and audio handling, following good coding practices.
 - **Color Palettes**: The artwork cycles through a curated color palette that complements the dynamic patterns generated from sound.
+
+## How to run
+cd src
+project.py Pixel-Beats
