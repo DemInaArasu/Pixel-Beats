@@ -1,7 +1,7 @@
 # PixelBeats: A Music-Driven Pixel Art Visualizer
 
 ## Demo
-Demo Video:
+Demo Video: https://drive.google.com/file/d/1iEDBJ-w3olOxcnePeEUfhN0TL-g26spb/view?usp=sharing
 
 ## Github Repository
 Github Repo: https://github.com/DemInaArasu/Pixel-Beats
